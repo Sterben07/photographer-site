@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна Петрова | Профессиональный фотограф</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Логотип Анна Петрова Фотография">
+            <h1>Анна Петрова</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Слайдер -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="img/slide1.jpg" alt="Свадебная фотография" onclick="openFullscreenImage(this)">
+            <img src="img/slide2.jpg" alt="Портретная съемка" onclick="openFullscreenImage(this)">
+            <img src="img/slide3.jpg" alt="Семейная фотосессия" onclick="openFullscreenImage(this)">
+        </div>
+        <button class="prev-button" aria-label="Предыдущий слайд">&lt;</button>
+        <button class="next-button" aria-label="Следующий слайд">&gt;</button>
+    </div>
+
+    <!-- О фотографе -->
+    <section id="about">
+        <div class="about-content">
+            <h2>О фотографе</h2>
+            <div class="about-text">
+                <p>Привет! Меня зовут Анна, и я профессиональный фотограф с 8-летним опытом работы.</p>
+                <p>Специализируюсь на свадебной, портретной и семейной фотографии. Для меня важно не просто сделать красивые снимки, а запечатлеть настоящие эмоции и моменты счастья.</p>
+                <p>Работала с журналами Vogue, Elle и Harper's Bazaar. Провожу индивидуальные и групповые фотосессии в студии и на природе.</p>
+                <p class="quote">"Фотография — это искусство остановленного времени"</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>300+</h3>
+                    <p>фотосессий</p>
+                </div>
+                <div class="stat">
+                    <h3>8 лет</h3>
+                    <p>опыта</p>
+                </div>
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>свадеб</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="portfolio">
+        <h2>Портфолио</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/gallery1.jpg" alt="Свадебная фотография" onclick="openFullscreenImage(this)">
+                <p>Свадебная съемка</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery2.jpg" alt="Портрет" onclick="openFullscreenImage(this)">
+                <p>Портретная съемка</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery3.jpg" alt="Семейная фотосессия" onclick="openFullscreenImage(this)">
+                <p>Семейная фотосессия</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery4.jpg" alt="Love story" onclick="openFullscreenImage(this)">
+                <p>Love story</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services">
+        <h2>Услуги и цены</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Свадебная съемка</h3>
+                <p class="price">от 25 000 ₽</p>
+                <ul>
+                    <li>10 часов съемки</li>
+                    <li>300+ обработанных фото</li>
+                    <li>Фотокнига в подарок</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Портретная съемка</h3>
+                <p class="price">от 8 000 ₽</p>
+                <ul>
+                    <li>2 часа съемки</li>
+                    <li>50+ фото</li>
+                    <li>2 образа</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Семейная фотосессия</h3>
+                <p class="price">от 12 000 ₽</p>
+                <ul>
+                    <li>3 часа съемки</li>
+                    <li>100+ фото</li>
+                    <li>2 локации</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section id="contact">
+        <h2>Записаться на съемку</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Имя *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+    </section>
+
+    <!-- Полноэкранное изображение -->
+    <div id="fullscreen-container" class="hidden">
+        <span class="close-button" onclick="closeFullscreenImage()">&times;</span>
+        <img src="" alt="Полноэкранное изображение" id="fullscreen-image">
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollToTopButton">↑ Наверх</button>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Анна Петрова</h3>
+                <p>Профессиональный фотограф</p>
+                <p>г. Москва</p>
+                <p>+7 (999) 123-45-67</p>
+                <p>anna@photo.ru</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://instagram.com" class="social-icon">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://facebook.com" class="social-icon">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://telegram.org" class="social-icon">
+                    <img src="img/telegram.png" alt="Telegram">
+                </a>
+                <a href="https://vk.com" class="social-icon">
+                    <img src="img/vk.png" alt="VK">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Анна Петрова Фотография. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
